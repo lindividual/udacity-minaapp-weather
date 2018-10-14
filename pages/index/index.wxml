@@ -1,6 +1,13 @@
 <!--index.wxml-->
 <view class='today'>
-  <view class='temp'>{{temp}}°</view>
+  <view class='temp'>{{temp}}<span class='figure'>°C</span></view>
   <view class='weather'>{{weather}}</view>
   <image class='weather-bg' src='{{weather_bg}}' mode='scaleToFill'></image>
+</view>
+
+<view class='forecast'>
+  <view class='forecast-title'>
+  <image class='time-icon' src='/images/time-icon.png' mode='widthFix'></image>
+  未来24小时天气预测
+  </view>
 </view>

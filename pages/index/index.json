@@ -1,4 +1,6 @@
 {
   "navigationBarBackgroundColor": "#ffffff",
-  "navigationBarTitleText": "微天气"
+  "navigationBarTitleText": "微天气",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
 }

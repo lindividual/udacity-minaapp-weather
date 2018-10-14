@@ -20,13 +20,20 @@ Page({
   },
 
   onLoad() {
-    console.log('hello world!')
+    this.getWeather()
+  },
 
+  onPullDownRefresh() {
+    this.getWeather(() => { wx.stopPullDownRefresh() })
+  },
+
+  getWeather(callback) {
     wx.request({
       url: 'https://wthrcdn.etouch.cn/weather_mini',
       // 请求数据写在data中
-      data: {city: '南京'},
+      data: { city: '深圳' },
       method: 'GET',
+
       success: res => {
         console.log(res)
         let result = res.data.data
@@ -36,13 +43,18 @@ Page({
         this.setData({
           temp: temp,
           weather: weather,
-          weather_bg: '/images/'+ weatherMap[weather].name +'-bg.png'
+          weather_bg: '/images/' + weatherMap[weather].name + '-bg.png'
         })
         wx.setNavigationBarColor({
           frontColor: '#000000',
           backgroundColor: weatherMap[weather].color,
         })
+      },
+
+      complete: () => {
+        callback && callback()
       }
+
     })
   }
 })

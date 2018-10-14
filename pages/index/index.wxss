@@ -28,3 +28,19 @@
   height: 100%;
   z-index: -1;
 }
+
+.figure {
+  font-size: 100rpx;
+}
+
+.forecast-title {
+  padding-top: 32rpx;
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  opacity: 0.5;
+}
+
+.time-icon {
+  width: 30rpx;
+}
