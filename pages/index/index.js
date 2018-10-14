@@ -12,11 +12,14 @@ const weatherMap = {
     name: 'sunny', color: '#cbeefd'}
 }
 
+var dailyForecast = []
+
 Page({
   data: {
     temp: "",
     weather: "",
     weather_bg: "",
+    dailyForecast: []
   },
 
   onLoad() {
@@ -31,7 +34,7 @@ Page({
     wx.request({
       url: 'https://wthrcdn.etouch.cn/weather_mini',
       // 请求数据写在data中
-      data: { city: '深圳' },
+      data: { city: '哈尔滨' },
       method: 'GET',
 
       success: res => {
@@ -39,12 +42,25 @@ Page({
         let result = res.data.data
         let temp = result.wendu
         let weather = result.forecast[0].type
-        console.log(temp, weather)
+        let forecast = result.forecast
+        // 请求成功后清空dailyForecast数组，防止重复push
+        dailyForecast = []
+        // 将forecast的数据push到dailyForecast中
+        for(let daily of forecast) {
+          dailyForecast.push({
+            date: daily.date.substr(0,3),
+            icon: '/images/'+ weatherMap[daily.type].name +'-icon.png',
+            temp: daily.high.substr(3,4)
+          })
+        }
+
         this.setData({
           temp: temp,
           weather: weather,
-          weather_bg: '/images/' + weatherMap[weather].name + '-bg.png'
+          weather_bg: '/images/' + weatherMap[weather].name + '-bg.png',
+          dailyForecast: dailyForecast
         })
+
         wx.setNavigationBarColor({
           frontColor: '#000000',
           backgroundColor: weatherMap[weather].color,

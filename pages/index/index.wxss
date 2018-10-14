@@ -44,3 +44,20 @@
 .time-icon {
   width: 30rpx;
 }
+
+.forecast-content {
+  white-space: nowrap;
+  padding-top: 32rpx;
+}
+
+.forecast-item {
+  display: inline-block;
+  width: 120rpx;
+  text-align: center;
+  padding-right: 32rpx;
+  font-size: 32rpx;
+}
+
+.weather-icon {
+  width: 60%;
+}

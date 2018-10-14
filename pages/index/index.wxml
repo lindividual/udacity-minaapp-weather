@@ -8,6 +8,13 @@
 <view class='forecast'>
   <view class='forecast-title'>
   <image class='time-icon' src='/images/time-icon.png' mode='widthFix'></image>
-  未来24小时天气预测
+  天气预告
   </view>
+  <scroll-view class='forecast-content' scroll-x='true'>
+    <view class='forecast-item' wx:for="{{dailyForecast}}">
+      <view>{{item.date}}</view>
+      <image src='{{item.icon}}' class='weather-icon' mode='widthFix'></image>
+      <view>{{item.temp}}</view>
+    </view>
+  </scroll-view>
 </view>
