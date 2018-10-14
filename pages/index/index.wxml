@@ -2,5 +2,5 @@
 <view class='today'>
   <view class='temp'>{{temp}}°</view>
   <view class='weather'>{{weather}}</view>
-  <image class='weather-bg' src='/images/sunny-bg.png' mode='scaleToFill'></image>
+  <image class='weather-bg' src='{{weather_bg}}' mode='scaleToFill'></image>
 </view>
