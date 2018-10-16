@@ -4,13 +4,11 @@
   /* color: green; */
   /* background-color: moccasin; */
   padding-top: 174rpx;
-  padding-bottom: 250rpx;
 }
 
 .temp {
   font-size: 200rpx;
   /* margin-top: 20%; */
-  line-height: 280rpx;
   opacity: 0.8;
 }
 
@@ -52,12 +50,29 @@
 
 .forecast-item {
   display: inline-block;
-  width: 120rpx;
+  width: 168rpx;
   text-align: center;
-  padding-right: 32rpx;
   font-size: 32rpx;
+  opacity: 0.8;
 }
 
 .weather-icon {
-  width: 60%;
+  width: 50%;
+  padding-top: 8rpx;
+}
+
+.today-weather {
+  display: flex;
+  padding: 32rpx 0rpx 32rpx 0rpx;
+  justify-content: space-between;
+  font-size: 32rpx;
+  line-height: 44.8rpx;
+  border-top: 1rpx solid rgba(0, 0, 0, 0.1);
+  margin: 150rpx 32rpx 0 32rpx;
+  opacity: 0.8;
+  align-items: center;
+}
+
+.arrow {
+  width: 16rpx;
 }
