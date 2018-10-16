@@ -1,1 +1,8 @@
-<view>hello world</view>
+<view class="list-weather" wx:for="{{dailyForecast}}">
+  <view class="list-date">
+    <view class="week">{{item.week_chi}}</view>
+    <view class="date">{{item.date}}</view>
+  </view>
+  <view class="list-temp">{{item.tem_day}}° - {{item.tem_night}}°</view>
+  <image class="list-weather-icon" src="{{item.icon}}" ></image>
+</view>

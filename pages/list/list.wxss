@@ -1,0 +1,25 @@
+.list-weather {
+    display: flex;
+    justify-content: space-between;
+    margin: 32rpx;
+    padding-bottom: 32rpx;
+    border-bottom: 1rpx solid rgba(0, 0, 0, 0.1)
+}
+
+.week {
+  font-size: 32rpx;
+}
+
+.date {
+  font-size: 24rpx;
+}
+
+.list-weather-icon {
+    height: 72rpx;
+    width: 72rpx;
+}
+
+.list-temp {
+  margin-top: 12rpx;
+  font-size: 40rpx;
+}

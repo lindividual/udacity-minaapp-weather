@@ -2,6 +2,26 @@
 App({
   dailyForecast: {},
 
+  weatherMap : {
+    '多云': { name: 'cloudy', color: '#deeef6'},
+    '阴': {
+      name: 'overcast', color: '#c6ced2'},
+    '小雨': {
+      name: 'lightrain', color: '#bdd5e1'},
+    '阵雨': {
+      name: 'lightrain', color: '#bdd5e1'},
+    '中雨': {
+      name: 'lightrain', color: '#bdd5e1'},
+    '大雨': {
+      name: 'lightrain', color: '#bdd5e1'},
+    '雨': {
+      name: 'lightrain', color: '#bdd5e1'},
+    '雷阵雨': {
+      name: 'heavyrain', color: '#c5ccd0'},
+    '晴': {
+      name: 'sunny', color: '#cbeefd'}
+  },
+
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
